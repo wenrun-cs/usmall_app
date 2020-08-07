@@ -1,0 +1,22 @@
+.indexFooter{
+     position: fixed;
+     left: 0;
+     bottom: 0;
+     display: flex;
+     width: 100vw;
+     height: 0.8rem;
+     border:0.01rem solid #cccccc;
+}
+.indexFooter a{
+    flex: 1;
+    text-align: center;
+    color: black;
+}
+.indexFooter a span{
+    display: block;
+    line-height: 0.4rem;
+    font-size: 0.2rem;
+}
+.indexFooter .select{
+   color: coral;
+}
