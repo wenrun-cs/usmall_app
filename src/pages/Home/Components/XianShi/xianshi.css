@@ -1,0 +1,21 @@
+.xianshi {
+    width: 100vw;
+}
+.xianshi ul{
+    width: 98%;
+    margin: 0.2rem auto;
+    display: flex;
+    justify-content: space-between;
+}
+.xianshi ul li {
+   flex: 1;
+   text-align: center;
+}
+.xianshi ul li img{
+    width: 1.5rem;   
+}
+.xianshi ul li p{
+    color: #ccc;
+    font-size: 0.2rem;
+    text-align: center;
+}

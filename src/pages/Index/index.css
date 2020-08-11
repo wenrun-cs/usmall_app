@@ -6,6 +6,7 @@
      width: 100vw;
      height: 0.8rem;
      border:0.01rem solid #cccccc;
+     background-color: #ffff;
 }
 .indexFooter a{
     flex: 1;

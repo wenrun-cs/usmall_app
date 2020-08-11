@@ -1,0 +1,35 @@
+.register header{
+    background-color:#FF9900;
+    line-height: 1rem; 
+    text-align: center;
+    width: 100vw;
+    position: relative;
+    color: #fff;
+}
+.register header button{
+    position: absolute;
+    top: 0.23rem;
+    left: 0.2rem;   
+}
+.register form{
+    width: 90%;
+    margin: 3rem auto;
+}
+.register form input{
+    outline: none;
+    width: 100%;
+    margin-bottom: 0.4rem;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #cccccc;
+}
+.register form  button{
+    width: 100%;
+    line-height: 1.2rem;
+    text-align: center;
+    background-color: #FF9900;
+    border-radius:0.3rem;
+    border: none;
+    margin-top: 0.3rem;
+    color: #fff;
+}

@@ -1,0 +1,39 @@
+.HDetail{
+    width: 100vw;
+}
+.HDetail ul{
+    width: 94%;
+    margin: 0.5rem auto;
+    padding-bottom: 0.8rem;
+}
+.HDetail ul li{
+    margin-bottom: 0.35rem;
+    overflow: hidden;
+}
+.HDetail ul li img{
+    float: left;
+    width: 1.8rem;
+}
+.HDetail .HDdiv{
+    float: right;
+    width: 65%;
+}
+.HDetail .HDdiv .p1{
+     font-size: 0.35rem;
+    margin-bottom: 0.4rem;
+}
+.HDetail .HDdiv .p2{
+    font-size: 0.3rem;
+    color: #E13435;
+    margin-bottom: 0.1rem;
+}
+.HDetail .HDdiv button{
+    border: none;
+    background-color: #FF9900;
+    text-align: center;
+    border-radius:0.2rem;
+    line-height: 0.6rem;
+    color: #fff;
+    font-size: 0.25rem;
+    padding: 0 0.4rem;
+}

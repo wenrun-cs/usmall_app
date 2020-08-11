@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-
+import 'antd-mobile/dist/antd-mobile.css'
 
 
 
@@ -12,10 +12,18 @@ import  './assets/css/reset.css'
 // 加载remjs
 import './assets/js/rem'
 
+import {Provider} from 'react-redux'
+import store from './store/index' 
+
+Component.prototype.$img='http://localhost:3000'
+
+
 ReactDOM.render(
-  <HashRouter>
+  <Provider store={store}>
+ <HashRouter>
     <App />
-  </HashRouter>,
+  </HashRouter>
+  </Provider>,
   document.getElementById('root')
 );
 

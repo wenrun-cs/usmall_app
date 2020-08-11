@@ -1,0 +1,150 @@
+.Detail header{
+    background-color:#FF9900;
+    line-height: 1rem; 
+    text-align: center;
+    width: 100vw;
+    position: relative;
+    color: #fff;
+}
+.Detail header button{
+    position: absolute;
+    top: 0.23rem;
+    left: 0.2rem;   
+}
+.Detail img{
+    width: 100vw;
+}
+.Detail{
+    padding-bottom: 1rem;
+}
+.Detail .detailD{
+    padding: 0.2rem;
+    width: 100vw;
+    box-sizing: border-box;
+    position: relative;
+}
+.Detail .detailD .detailDP{
+    margin-top: 0.2rem;
+}
+.Detail .detailD .detailDP p{
+    display:  inline-block;
+    vertical-align: bottom;
+}
+.Detail .pp{
+    color: #FF0000;
+    font-size: 0.3rem;
+    margin-right: 0.5rem;
+}
+.Detail .px,.Detail .pr{
+    border: 1px solid #FFCB65;
+    color: #FFCB65;
+    line-height: 0.5rem;
+    text-align: center;
+    padding: 0 0.1rem;
+    font-size: 0.3rem;
+    margin-right: 0.2rem;
+}
+.Detail .detailDPP p{
+  text-decoration: line-through;
+  color: #cccccc;
+  font-size: 0.3rem;
+  text-decoration-color: #cccccc;
+}
+.Detail .shoucang{
+    position: absolute;
+    top: 0;
+    right: 0.3rem;
+    color: #FF0000;
+    text-align: center;
+    border-left: 1px solid #cccccc;
+    padding-left: 0.1rem;
+}
+.Detail .shoucang img{
+    width: 0.35rem;
+}
+.Detail .shoucang p{
+    font-size: 0.1rem;
+}
+.DDetail .jg{
+    width: 100vw;
+    line-height: 1rem;
+    background-color: #fff;
+    position: fixed;
+    box-sizing: border-box;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid #cccccc;
+    text-align: right;
+}
+.DDetail .jga{
+    background-color: #FF9900;
+    display: inline-block;
+    padding: 0 0.2rem;
+    color: #fff;
+    font-size: 0.3rem;
+}
+.DDetail .blackk{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.DDetail .writek{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 5rem;
+    background-color: #fff;
+    z-index: 99 !important;
+    padding: 0.2rem 0.5rem;
+
+}
+.DDetail .writek .fir{
+    overflow: hidden;
+}
+.DDetail .writek .fir img{
+   width: 2rem; 
+   float: left;
+   overflow: hidden;
+   border-radius: 0.3rem;
+}
+.DDetail .writek .fir p{
+    display: inline-block;
+    font-size: 0.4rem;
+    margin-top: 0.3rem;
+    margin-left: 0.2rem;
+}
+.DDetail .writek .guiName{
+    font-weight: bold;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+}
+.DDetail .writek .gui{
+    display: flex;
+    flex-wrap: wrap;
+}
+.DDetail .writek .gui span{
+   display: inline-block;
+   border: 1px solid #B4B4B4;
+   padding: 0.15rem 0.3rem;
+   margin-left: 0.3rem;
+   font-size: 0.3rem;
+}
+.DDetail .writek .jiagou{
+    margin:0.2rem auto;
+    margin-left: 1.4rem;
+    display: inline-block;
+    background-color: #FFAA00;
+    color: #fff;
+    text-align: center;
+    line-height: 1rem;
+    padding: 0  0.2rem ;
+    border: none;
+}
+.DDetail .writek .gui .active{
+    border: 1px solid #FFA827;
+    color: #FFA827;
+}
