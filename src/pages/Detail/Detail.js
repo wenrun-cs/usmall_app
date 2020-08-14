@@ -89,10 +89,10 @@ class Detail extends Component {
                                 <div className="detailDP">
                                     <p className='pp'>{filterPrice(item.price)}</p>
                                     {
-                                        item.ishot == 1 ? <p className='px'>热卖</p> : null
+                                        item.ishot === 1 ? <p className='px'>热卖</p> : null
                                     }
                                     {
-                                        item.isnew == 1 ? <p className='pr'>新品</p> : null
+                                        item.isnew === 1 ? <p className='pr'>新品</p> : null
                                     }
     
                                 </div>

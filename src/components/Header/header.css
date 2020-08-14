@@ -5,6 +5,7 @@
     left: 0;
     top: 0;
     background-color: #FF9900;
+    z-index: 999;
 }
 .header-title{
     width: 100%;

@@ -28,7 +28,7 @@ export default class Register extends Component {
     }
     register(){
         getRegister(this.state.user).then(res=>{
-            if(res.data.code==200){
+            if(res.data.code===200){
                 successAlert('注册成功')
                 this.props.history.push('/login') 
             }

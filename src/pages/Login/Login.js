@@ -35,7 +35,7 @@ import {successAlert} from '../../utils/alert'
     // 登录
     login(){
         getLogin(this.state.user).then( res=>{
-            if(res.data.code==200){
+            if(res.data.code===200){
                 successAlert('登录成功')
                 // 调用方法将user信息放进库里
                  this.props.userInfo(res.data.list)

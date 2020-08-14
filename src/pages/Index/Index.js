@@ -14,7 +14,7 @@ export default class Index extends Component {
             <div>
                 <Switch>
                    <Route path='/index/home' component={Home}></Route>
-                   <Route path="/index/cate" component={Cate}> </Route>
+                   <Route path='/index/cate' component={Cate}></Route>
                    <Route path='/index/shopcar' component={Shopcar}></Route>
                    <Route path='/index/mine' component={Mine}></Route>
                    <Redirect to='/index/home'></Redirect>

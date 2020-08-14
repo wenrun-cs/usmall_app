@@ -123,13 +123,14 @@
     margin-bottom: 0.3rem;
 }
 .DDetail .writek .gui{
+    width: 7rem;
     display: flex;
     flex-wrap: wrap;
 }
 .DDetail .writek .gui span{
    display: inline-block;
    border: 1px solid #B4B4B4;
-   padding: 0.15rem 0.3rem;
+   padding: 0.15rem 0.2rem;
    margin-left: 0.3rem;
    font-size: 0.3rem;
 }

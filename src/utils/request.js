@@ -1,8 +1,27 @@
 import axios from 'axios'
 import qs from 'qs'
+// 引入弹框
+import {successAlert} from '../utils/alert'
+// 引入库
+import store from '../store/index' 
+// 请求拦截
+axios.interceptors.request.use(config=>{
+    // console.log(store.getState().user.user.token)
+    if(config.url !== '/api/login'){
+       config.headers.authorization=store.getState().user.user.token
+    }
+    return config;
+})
+
+// 响应拦截
 axios.interceptors.response.use((res)=>{
    console.group("=======当前访问的地址为"+res.config.url+"=====")
    console.log(res);
+   if(res.data.msg==="登录已过期或访问权限受限"){
+      successAlert('登录已过期或访问权限受限');
+      window.open("http://localhost:3000/login");
+      return;
+   }
    return res;
 })
 
@@ -75,14 +94,7 @@ export const getLogin=(params)=>{
         data:qs.stringify(params)
     })
 }
-// 购物车列表 uid
-export const getShopcar=(params)=>{
-    return axios({
-        url:baseUrl+'/api/cartlist',
-        method:'get',
-        params
-    })
-}
+
 // 购物车添加 uid goodsid  num 
 export const getCartadd=(params)=>{
    return axios({
@@ -90,6 +102,14 @@ export const getCartadd=(params)=>{
        method:'post',
        data:qs.stringify(params)
    })
+}
+// 购物车列表 uid
+export const getShopcar=(params)=>{
+    return axios({
+        url:baseUrl+'/api/cartlist',
+        method:'get',
+        params
+    })
 }
 //购物车删除 id购物车编号
 export const getCartdelete=(params)=>{
