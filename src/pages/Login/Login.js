@@ -34,6 +34,7 @@ import {successAlert} from '../../utils/alert'
     }
     // 登录
     login(){
+        
         getLogin(this.state.user).then( res=>{
             if(res.data.code===200){
                 successAlert('登录成功')
@@ -65,7 +66,7 @@ import {successAlert} from '../../utils/alert'
                      <Link to="/register">注册</Link>
                  </header>
                   {/*表单*/}
-                  <form>
+                  <div className="form">
                       <div>
                           <p>账号：</p>
                           <input type="text" value={user.phone}  onChange={(e)=>this.changeUser(e,"phone")}  />
@@ -76,7 +77,7 @@ import {successAlert} from '../../utils/alert'
                       </div>
                       <p className="wang">忘记密码</p>
                       <button onClick={()=>this.login()}>登录</button>
-                  </form>
+                  </div>
             </div>
         )
     }

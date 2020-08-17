@@ -16,13 +16,22 @@ const getShopCar=(arr)=>{
     }
 }
 // 请求购物车列表
-export const addShopCarAction=(id)=>{
+export const addShopCarAction=(isD)=>{
     return (dispatch,getState)=>{
+        const {shopCarList}=getState().shop
+        const arrC=shopCarList.map(item=>item.checked)
         getShopcar({uid:getUser(getState()).uid}).then(res=>{
             const list=res.data.list?res.data.list:[]
-            list.forEach(item => {
+            list.forEach((item,index) => {
+               if(isD){
                 item.checked=false
+                dispatch(changeisAllAction(true))
+               }else{
+                item.checked=arrC[index]
+                dispatch(changeisAllAction(false))
+               }
             });
+           
             dispatch(getShopCar(list))
         })
     }
@@ -34,9 +43,10 @@ export const changeIsEditorAction=()=>{
     }
 }
 // ===========修改isAll全选==============
-export const changeisAllAction=()=>{
+export const changeisAllAction=(bool)=>{
     return{
-        type:'changeIsAll'
+        type:'changeIsAll',
+        bool
     }
 }
 
@@ -62,7 +72,7 @@ export const requestEditAction=(data)=>{
 export const requestDelAction=id=>{
     return (dispatch)=>{
         getCartdelete({id:id}).then(res=>{
-           dispatch(addShopCarAction())
+           dispatch(addShopCarAction(true))
         })
     }
 }
@@ -86,7 +96,7 @@ const reducer=(state=initState,action)=>{
         case "changeIsAll":
             return{
                 ...state,
-                isAll:!state.isAll,
+                isAll:action.bool?false:!state.isAll,
                 shopCarList:state.shopCarList.map(item=>{
                    item.checked=!state.isAll
                     return item

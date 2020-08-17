@@ -6,8 +6,8 @@ import {successAlert} from '../utils/alert'
 import store from '../store/index' 
 // 请求拦截
 axios.interceptors.request.use(config=>{
-    // console.log(store.getState().user.user.token)
-    if(config.url !== '/api/login'){
+  
+    if(config.url !== '/api/login'||config.url !== '/api/register'){
        config.headers.authorization=store.getState().user.user.token
     }
     return config;
@@ -19,7 +19,7 @@ axios.interceptors.response.use((res)=>{
    console.log(res);
    if(res.data.msg==="登录已过期或访问权限受限"){
       successAlert('登录已过期或访问权限受限');
-      window.open("http://localhost:3000/login");
+    //   window.open("http://localhost:3000/login");
       return;
    }
    return res;

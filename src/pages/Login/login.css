@@ -13,11 +13,11 @@
     right: 0.2rem;   
     color: #fff; 
 }
-.login form{
+.login .form{
     width: 90%;
     margin: 3rem auto;
 }
-.login form input{
+.login .form input{
     outline: none;
     width: 100%;
     margin-bottom: 0.4rem;
@@ -25,12 +25,12 @@
     border: none;
     border-bottom: 1px solid #cccccc;
 }
-.login form .wang{
+.login .form .wang{
     float: right;
     color: #a1a3a5;
     font-size: 0.3rem;
 }
-.login form  button{
+.login .form  button{
     width: 100%;
     line-height: 1.2rem;
     text-align: center;
